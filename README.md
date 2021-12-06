@@ -23,7 +23,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/joaofeijon/netFilmes>
+$ git clone https://github.com/joaofeijon/netFilmes
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd filme
