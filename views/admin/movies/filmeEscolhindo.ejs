@@ -1,0 +1,20 @@
+<%- include ('../../partials/header.ejs') %> 
+<%- include ('../../partials/navbarAdm.ejs') %> 
+<body>
+
+    <div class="card">
+        <div class="card-title">
+            <h3>Lista de Filmes de <%- categories.title %> </h3>
+        </div>
+    </div>
+<% movies.forEach((movie) => { %> 
+    <div class="card d-flex justify-content-between">
+        <h5><%- movie.movie %> </h5>
+        <a href="/filmes/<%- movie.id %> " class="btn btn-success">Ver filme</a>
+    </div>
+<% }) %> 
+</body>
+
+
+
+<%- include ('../../partials/footer.ejs') %> 

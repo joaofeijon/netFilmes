@@ -1,0 +1,38 @@
+<!-- Navbar with a navbar-item as dropdown -->
+<nav class="navbar">
+    <!-- Navbar brand -->
+    <a href="/" class="navbar-brand">
+      NetFilmes
+    </a>
+    <!-- Navbar text -->
+    <span class="navbar-text ml-5"> <!-- ml-5 = margin-left: 0.5rem (5px) -->
+      <span class="badge text-monospace">v1.0</span> <!-- text-monospace = font-family shifted to monospace -->
+    </span>
+    <!-- Navbar nav -->
+    <ul class="navbar-nav ml-auto"> <!-- ml-auto = margin-left: auto -->
+      <li class="nav-item active">
+        <a href="/admin/users" class="nav-link">Usuarios</a>
+      </li>
+      <li class="nav-item dropdown with-arrow">
+        <a class="nav-link" data-toggle="dropdown" id="nav-link-dropdown-toggle">
+          Opcoes 
+          <i class="fa fa-angle-down ml-5" aria-hidden="true"></i> <!-- ml-5= margin-left: 0.5rem (5px) -->
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-link-dropdown-toggle">
+          <a href="/admin/register" class="dropdown-item">Adiconar novo ADM</a>
+          <a href="/admin/admin" class="dropdown-item">Lista de ADM</a>
+          <a href="/admin/category/new" class="dropdown-item">Adicionar categoria</a>
+          <a href="/admin/category" class="dropdown-item">Categoria</a>
+          <a href="/admin/adicionarFilme" class="dropdown-item">Adiconar Filme</a>
+          <a href="/admin/filmes" class="dropdown-item">Filmes</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- JavaScript -->
+<script type="text/javascript">
+
+    halfmoon.toggleDarkMode();
+
+</script>

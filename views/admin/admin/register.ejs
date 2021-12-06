@@ -1,0 +1,29 @@
+<%- include ('../../partials/header.ejs') %> 
+<%- include ('../../partials/navbarAdm.ejs') %> 
+<body>
+
+<div class="card">
+    <h2 class="card-title">
+        Registro de admin
+    </h2>
+    <div class="card-body">
+        <form method="POST" action="/admin/save">
+            <!-- Normal input -->
+            <input type="text" class="form-control" placeholder="Nome" name="name">
+            <br>
+            <input type="email" class="form-control" placeholder="Email" name="email">
+            <br>
+            <input type="password" class="form-control" placeholder="Senha" name="password">
+            <br>
+            <input type="password" class="form-control" placeholder="Senha" name="password2">
+            <br>
+            <div class="text-right">
+                <button class="btn btn-success ">Criar</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+<%- include ('../../partials/footer.ejs') %> 

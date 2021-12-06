@@ -1,0 +1,31 @@
+<%- include ('../../partials/header.ejs') %> 
+<body>
+
+    <div class="card">
+        <div class="card-title">
+            Mudar Senha
+        </div>
+        <br>
+        <form action="/mudarsenha" method="POST">
+            <input type="hidden" name="email" value="<%- email %>">
+            <div class="form-group">
+                <input type="password" class="form-control" id="senha" name="password1" placeholder="Nova Senha">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="senha" name="password2" placeholder="Confirmar Senha">
+            </div>
+            <div class="d-flex flex-row-reverse">
+                <button class="btn btn-success d-flex ">Mudar Senha</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+<%- include ('../../partials/footer.ejs') %> 
+
+<!-- JavaScript -->
+<script type="text/javascript">
+
+    halfmoon.toggleDarkMode();
+
+</script>

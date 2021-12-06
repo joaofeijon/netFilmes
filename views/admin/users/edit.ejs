@@ -1,0 +1,70 @@
+<%- include ('../../partials/header.ejs') %> 
+<%- include ('../../partials/navbar.ejs') %> 
+<body>
+
+    <% if(senha != undefined){ %> 
+        <% if(senha != "Espere uns minutos para que a alteração seja efetuada"){ %> 
+            <div class="alert alert-danger m-sm-10" role="alert">
+                <button class="close" data-dismiss="alert" type="button" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="alert-heading">Erro</h4>
+                <%- senha %> 
+              </div>
+
+        <% }else{ %> 
+            <div class="alert alert-primary m-sm-10" role="alert">
+                <button class="close" data-dismiss="alert" type="button" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="alert-heading">Tudo certo</h4>
+                <%- senha  %> 
+              </div>
+        <% } %> 
+    <% }else{ %> 
+
+    <% } %> 
+
+
+<div class="card">
+    <div class="card-title">
+        Editar Usuario
+    </div>
+    <br>
+    <div class="card-body">
+        <form action="/editUser" method="POST">
+            <input type="text" class="form-control alt-dm" placeholder="Nome" name="name" value="<%- user.name %>">
+            <br>
+            <input type="email" class="form-control alt-dm" placeholder="E-mail" name="email" value="<%- user.email  %>">
+            <br>
+            <div class="d-flex flex-row-reverse">
+                <button class="btn btn-success d-flex ">Editar Perfil</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+    <div class="card">
+        <div class="card-title">
+            Mudar Senha
+        </div>
+        <br>
+        <form action="/mudarsenha" method="POST">
+            <input type="hidden" name="email" value="<%- user.email %>">
+            <div class="form-group">
+                <input type="password" class="form-control" id="senha" name="password1" placeholder="Nova Senha">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="senha" name="password2" placeholder="Confirmar Senha">
+            </div>
+            <div class="d-flex flex-row-reverse">
+                <button class="btn btn-success d-flex ">Mudar Senha</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script>
+
+</script>
+<%- include ('../../partials/footer.ejs') %> 

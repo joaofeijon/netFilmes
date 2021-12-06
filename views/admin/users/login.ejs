@@ -1,0 +1,41 @@
+<%- include ('../../partials/header.ejs') %> 
+<%- include ('../../partials/navbar.ejs') %> 
+<body>
+    
+    <% if(email != undefined){ %> 
+
+        <div class="alert alert-danger m-sm-10" role="alert">
+            <button class="close" data-dismiss="alert" type="button" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="alert-heading">Erro</h4>
+            <%- email %> 
+          </div>
+    <% }else{ %> 
+
+    <% } %> 
+
+    <div class="card">
+        <h2 class="card-title">
+            Login de usuario
+        </h2>
+
+        <div class="card-body">
+            <form method="POST" action="/user/authenticate">
+                <!-- Normal input -->
+                <input type="email" class="form-control" placeholder="Email" name="email">
+                <br>
+                <input type="password" class="form-control" placeholder="Senha" name="password">
+                <br>
+
+                <div class="text-right d-flex justify-content-between">
+                    <a class="btn btn-secondary text-left" href="/user/create">Registra-se</a>
+                    <button class="btn btn-success ">Entrar</button>
+                </div>
+
+    
+            </form>
+        </div>
+    </div>
+</body>
+<%- include ('../../partials/footer.ejs') %> 

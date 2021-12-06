@@ -1,0 +1,54 @@
+<%- include ('../../partials/header.ejs') %> 
+<%- include ('../../partials/navbarAdm.ejs') %> 
+<body>
+
+<div class="card">
+    <h2 class="card-title">
+        Adicionar Filme
+    </h2>
+    <div class="card-body">
+        <form method="POST" action="/admin/createMovie">
+            <!-- Normal input -->
+            <input type="text" class="form-control" placeholder="Titulo" name="movie">
+            <br>
+            <input type="text" class="form-control" placeholder="Ano" name="year">
+            <br>
+            <textarea class="form-control" placeholder="Resumo do Filme" id="mytextarea" name="resumo"></textarea>
+            <br>
+            <textarea class="form-control" placeholder="Imagen do filme" id="mytextarea2" name="image"></textarea>
+            <br>
+            <input type="float" class="form-control" placeholder="Preço" name="price">
+            <br>
+            <select name="category" class="form-control">
+                <% categories.forEach((category) => {%>
+                    <option value='<%- category.id %>'><%- category.title %> </option>
+                <% })  %>     
+            </select>
+            <br>
+            <div class="text-right">
+                <button class="btn btn-success ">Adicionar</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+<br>
+</body>
+
+<script src="/tinymce/tinymce.min.js"></script>
+<script>
+  tinymce.init({
+    selector: '#mytextarea',
+    plugins: [
+        'advlist autolink link image lists print preview hr searchreplace wordcount fullscreen insertdatetime media save table paste emoticons'
+    ]
+  });
+  tinymce.init({
+    selector: '#mytextarea2',
+    plugins: [
+        'advlist autolink link image lists print preview hr searchreplace wordcount fullscreen insertdatetime media save table paste emoticons'
+    ]
+  });
+</script>
+
+<%- include ('../../partials/footer.ejs') %> 

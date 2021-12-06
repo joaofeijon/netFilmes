@@ -1,0 +1,46 @@
+<!-- Navbar with input group -->
+<nav class="navbar">
+    <!-- Navbar brand -->
+    <a href="/" class="navbar-brand">
+      NetFilmes
+    </a>
+    <!-- Inline form with input group -->
+    <form class="form-inline ml-auto" method="POST" action="/busca" > <!-- ml-auto = margin-left: auto -->
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Busque" name="busca" required="required">
+        <div class="input-group-append">
+          <button class="btn" type="submit">
+            <i class="fa fa-search" aria-hidden="true">Busque</i>
+            <span class="sr-only">Busque</span> <!-- sr-only = show only on screen readers -->
+          </button>
+        </div>
+      </div>
+    </form>
+    <div class="navbar-content">
+        <% if(session != undefined) {%>
+            <li class="nav-item dropdown with-arrow">
+              <a class="nav-link" data-toggle="dropdown" id="nav-link-dropdown-toggle">
+                Conta &Darr;
+                <i class="fa fa-angle-down ml-5" aria-hidden="true"></i> <!-- ml-5= margin-left: 0.5rem (5px) -->
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-link-dropdown-toggle">
+                <a href="/user/edit" class="dropdown-item">Conta</a>
+                <a href="/buy/movies" class="dropdown-item">Filmes</a>
+                <hr>
+                <a href="/user/logout" class="dropdown-item">Sair</a>
+              </div>
+            </li>
+        <% }else{%>  
+            <a class="btn btn-primary" href="/user/login">Login</a>
+        <% } %> 
+    </div>
+    </ul>
+  </nav>
+
+
+<!-- JavaScript -->
+<script type="text/javascript">
+
+    halfmoon.toggleDarkMode();
+
+</script>

@@ -1,0 +1,30 @@
+<%- include ('partials/header.ejs') %> 
+<%- include ('partials/navbar.ejs') %>
+<body>
+    <div class="card">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Ano</th>
+                <div class="d-flex flex-row-reverse">
+                <th></th>
+                </div>
+              </tr>
+            </thead>
+            <tbody>
+            <% movies.forEach((movie) => { %> 
+              <tr>
+                <th><%- movie.movie %> </th>
+                <td><%- movie.year %> </td>
+                <div class="d-flex flex-row-reverse">
+                  <td><a href="/filmes/<%- movie.id %>" class="btn btn-success">Ver filme</a></td>
+                </div>
+              </tr>
+             <% }) %>   
+            </tbody>
+          </table>
+    </div>
+    
+</body>
+<%- include ('partials/footer.ejs') %> 

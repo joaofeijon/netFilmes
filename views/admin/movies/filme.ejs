@@ -1,0 +1,37 @@
+<%- include ('../../partials/header.ejs') %> 
+<%- include ('../../partials/navbarAdm.ejs') %> 
+<body>
+
+    <div class="card">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Amo</th>
+                <th>preco</th>
+                <th>Comando</th>
+              </tr>
+            </thead>
+            <tbody>
+            <% movies.forEach((movie) => { %> 
+              <tr>
+                <td><%- movie.id %></td>
+                <th><%- movie.movie %> </th>
+                <td><%- movie.year %> </td>
+                <td><%- movie.price %> </td>
+                
+                <form action="" method="POST">
+                    <td><a href="/filmes/<%- movie.id %>" class="btn btn-success">Ver filme</a>
+                        <button type="submit" class="btn btn-danger">Remover</button></td>
+                </form>
+              </tr>
+             <% }) %>   
+            </tbody>
+          </table>
+    </div>
+    
+
+
+</body>
+<%- include ('../../partials/footer.ejs') %> 

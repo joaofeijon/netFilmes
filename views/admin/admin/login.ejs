@@ -1,0 +1,23 @@
+<%- include ('../../partials/header.ejs') %> 
+<%- include ('../../partials/navbar.ejs') %> 
+<body>
+    <div class="card">
+        <h2 class="card-title">
+            Login de admin
+        </h2>
+        <div class="card-body">
+            <form method="POST" action="/admin/autheticate">
+                <!-- Normal input -->
+                <input type="email" class="form-control" placeholder="Email" name="email">
+                <br>
+                <input type="password" class="form-control" placeholder="Senha" name="password">
+                <br>
+
+                <div class="text-right">
+                    <button class="btn btn-success ">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<%- include ('../../partials/footer.ejs') %> 

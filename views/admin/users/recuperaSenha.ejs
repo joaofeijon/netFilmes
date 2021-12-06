@@ -1,0 +1,23 @@
+<%- include ('../../partials/header.ejs') %> 
+<body>
+    <div class="card">
+        <card class="card-title">
+            <h2>Recuperar Senha</h1>
+        </card>
+        <form action="/senhaNova" method="POST">
+            <input text="text" class="form-control" name="email" placeholder="Seu email">
+            <br>
+            <div class="d-flex flex-row-reverse">
+                <button class="btn btn-success">Recuperar</button>
+            </div>
+        </form>
+    </div>
+</body>
+<%- include ('../../partials/footer.ejs') %> 
+
+<!-- JavaScript -->
+<script type="text/javascript">
+
+    halfmoon.toggleDarkMode();
+
+</script>

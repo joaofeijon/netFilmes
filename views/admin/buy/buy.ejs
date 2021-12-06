@@ -1,0 +1,51 @@
+<%- include ('../../partials/header.ejs') %> 
+<%- include ('../../partials/navbar.ejs') %> 
+<body>
+    <div class="card">
+        <div class="card-title">
+            Compra
+            <br>
+        </div>
+        <div class="card-body">
+            <form action="/buy/auth" method="POST">
+                <br>
+                <input type="text" name="nome" class="form-control" placeholder="Seu nome" value="<%- user.name %>">
+                <br>
+                <input type="text" name="sobrenome" class="form-control" placeholder="Seu sobrenome" >
+                <br>
+                <input type="number" name="cpf" class="form-control" placeholder="Seu CPF" >
+                <br>
+                <input type="number" name="telefone" class="form-control" placeholder="Seu Telefone">
+                <br>
+                <input type="text" name="email" class="form-control" placeholder="Seu email" value="<%- user.email %>">
+                <br>
+                <input type="text" name="cep" class="form-control" placeholder="Seu CEP" >
+                <br>
+                <input type="text" name="endereco" class="form-control" placeholder="Seu endereço" >
+                <br>
+                <input type="text" name="numero" class="form-control" placeholder="Seu número" >
+                <br>
+                <input type="text" name="complemento" class="form-control" placeholder="Seu complemento" >
+                <br>
+                <input type="text" name="bairro" class="form-control" placeholder="Seu bairro" >
+                <br>
+                <input type="text" name="cidade" class="form-control" placeholder="Sua cidade" >
+                <br>
+                <input type="text" name="estado" class="form-control" placeholder="Seu estado" >
+                <br>
+                <input type="text" name="formaPagamento" class="form-control" placeholder="Forma de pagamento" >
+                <br>
+                <input type="hidden" name="id_user" value="<%- user.id %>">
+                <input type="hidden" name="id_movie" value="<%- movie.id %>">
+                <input type="hidden" name="valor" value="<%- movie.price %>">
+                <div class="d-flex flex-row-reverse">
+                    <button class="btn btn-success">Compra</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+
+<%- include ('../../partials/footer.ejs') %> 

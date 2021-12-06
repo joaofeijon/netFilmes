@@ -1,0 +1,32 @@
+<%- include ('../../partials/header.ejs') %> 
+<%- include ('../../partials/navbarAdm.ejs') %> 
+<body>
+    <div class="card">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Comandos</th>
+
+              </tr>
+            </thead>
+            <tbody>
+            <% users.forEach((users) => { %> 
+              <tr>
+                <td><%- users.id %></td>
+                <th><%- users.name %> </th>
+                <td><%- users.email %> </td>
+                <form action="/admin/deletarUser" method="POST">
+                  <input type="hidden" name="id" value="<%- users.id %>">
+                  <td><Button class="btn btn-danger">Deletar</Button></td>
+                </form>
+              </tr>
+             <% }) %>   
+            </tbody>
+          </table>
+    </div>
+    
+</body>
+<%- include ('../../partials/footer.ejs') %> 
